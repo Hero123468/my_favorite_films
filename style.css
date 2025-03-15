@@ -1,16 +1,31 @@
+body {
+  background-color: darkgreen;
+}
+body {
+  color: black;
+  font-family: 'Times New Roman', Times, serif
+  '';
+}
+
+h1 {
+  color: darkgray;
+}
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 200px;
     height: 300px;
     object-fit: contain;
+    background-color: darkgreen;
   }
   
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: darkgreen;
   }
   
   .container {
     padding: 2px 16px;
+    background-color: darkgreen;
   }
   

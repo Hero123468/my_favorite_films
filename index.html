@@ -1,42 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Favorite Films</title>
 <link rel="stylesheet" href="style.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
 </head>
+
 <body>
-<img src ="mynameisneo.jpg" />
-<h1><ins>The Matrix has you!</ins></h1>
-<p><B>In a world of blue and red pills<br>
-one man chooses to watch movies<br>
-and share the ones that are legendary.</B></p>
 
-<table style="width: 70%;">
-    <tr>
-      <th>Films</th>
-      <th>Production Company</th>
-      <th>Time</th>
-    </tr>
-    <tr style="height:100px">
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-    </tr>
-  </table>
 
-<div class="card">
-    <img src="it'samemario.jpg" alt="Avatar" style="width:100%">
-    <div class="container">
-      <h4><b>Mario </b></h4>
+  <img src="mynameisneo.jpg"alt="Neo"  />
+  <h1><ins>The Matrix has you!</ins></h1>
+  <p><b>In a world of blue and red pills<br>
+  one manchooses to watch movies<br>and share the ones that are legendary.</b></p>
+
+<h1>Card Flip with Image</h1>
+<h3>Hover over the image below:</h3>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="it'samemario.jpg" alt="Avatar" style="width:100%; height: 100%; object-fit: cover;">"
+    </div>
+    <div class="flip-card-back"
+      <h1>Mario</h1>
       <p>Licensed Plumber</p>
     </div>
+  </div>
+</div>
 
-  <div class="card">
+<div class="card">
     <img src="alangrant.jpg" alt="Avatar" style="width:100%">
     <div class="container">
       <h4><b>Alan Grant </b></h4>
